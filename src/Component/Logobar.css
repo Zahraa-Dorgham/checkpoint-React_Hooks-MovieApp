@@ -1,0 +1,47 @@
+/* logobar */
+
+.logo-container {
+   
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #070c30be;
+    border-top: 2px solid #84a3d2;
+    border-bottom: 2px solid #84a3d2;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    width: max-content;
+    gap: 60px;
+    animation: scroll 20s linear infinite;
+}
+
+.img-logo {
+    height: 40px;
+    width: auto;
+
+    filter: grayscale(100%);
+    opacity: 0.6;
+
+    transition: all 0.3s ease;
+}
+
+.img-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

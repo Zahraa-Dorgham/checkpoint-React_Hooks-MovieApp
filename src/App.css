@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Dégradé radial : centre bleu nuit, bords presque noirs */
+  background: radial-gradient(circle at center, #070c30 0%, #1c1c67 80%, #2e6596 100%);
+  background-attachment: fixed;
+  /* Le fond reste fixe au scroll */
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 92vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.video-background iframe {
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(44, 49, 83, 0.459); */
+  z-index: -1;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;600&display=swap');
+
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.decor-star,
+.decor-sparkle-badge {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.5;
+  color: #a2a7ff;
+}
+
+.star-left {
+  top: 20%;
+  left: 15%;
+  transform: rotate(-15deg);
+}
+
+.star-right {
+  top: 45%;
+  right: 15%;
+  transform: rotate(20deg);
+  color: #754cc6;
+}
+
+.badge-container {
+  position: relative;
+  display: inline-block;
+}
+
+.decor-sparkle-badge {
+  top: -15px;
+  right: -25px;
+  color: #bc5dde;
+}
+
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(87, 193, 235, 0.1);
+  border: 1px solid rgba(87, 193, 235, 0.4);
+  color: #57c1eb;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  backdrop-filter: blur(5px);
+}
+
+.header-title {
+  font-family: 'Cinzel', serif;
+  font-size: 72px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+.magical-text {
+  background: linear-gradient(90deg, #4699ba, #754cc6, #bc5dde);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.decor-star {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.4;
+  filter: drop-shadow(0 0 5px rgba(162, 167, 255, 0.3));
+}
+
+/* --- Positionnement de chaque étoile --- */
+
+/* Étoile en haut à gauche */
+.s1 {
+  top: 15%;
+  left: 10%;
+  color: #4699ba;
+  transform: rotate(-20deg);
+}
+
+/* Étoile milieu droite (la grosse) */
+.s2 {
+  top: 40%;
+  right: 8%;
+  color: #754cc6;
+  opacity: 0.6;
+}
+
+/* Petite étoile en bas à gauche */
+.s3 {
+  bottom: 20%;
+  left: 20%;
+  color: #bc5dde;
+}
+
+/* Grande étincelle en haut à droite */
+.sp1 {
+  top: 10%;
+  right: 20%;
+  color: #a2a7ff;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Étincelle milieu gauche */
+.sp2 {
+  top: 50%;
+  left: 5%;
+  color: #57c1eb;
+}
