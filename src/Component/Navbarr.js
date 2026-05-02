@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Search, Film, Home } from "lucide-react";
+import { Link } from "react-router-dom";
 import './Navbarr.css'; 
 import ReactStars from 'react-stars'
 
@@ -18,11 +19,12 @@ function Navbarr({ settext, setrate }) {
             
                 <ul className="nav-links">
                     <li className="nav-item">
-                        <Home size={18} /> Home
+                        <Home size={18} /> <Link to="/about" style={{ textDecoration: "none", color: "white" }}>About</Link>
                     </li>
                     <li className="nav-item">
-                        <Film size={18} /> Movies
+                        <Film size={18} /> <Link to="/movies" style={{textDecoration:"none", color:"white"}}>Movies</Link>
                     </li>
+                    
                    
                 </ul>
                 <div className="search-container">

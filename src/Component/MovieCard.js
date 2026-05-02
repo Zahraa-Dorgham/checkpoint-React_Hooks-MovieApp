@@ -2,12 +2,14 @@ import React from 'react';
 import { Star, Play, Sparkles } from "lucide-react";
 import "./MovieCard.css";
 import ReactStars from 'react-stars'
+import { Link } from 'react-router-dom';
 const MovieCard = ({ el}) => {
     return (
-        <div
-            className="movie-card-container group"
-        >
-            <div className="glow-halo" />
+        <Link to={`/trailer/${el.id}`}>
+            <div
+                className="movie-card-container group"
+            >
+                <div className="glow-halo" />
 
             <div className="card-body">
                 <img
@@ -49,6 +51,7 @@ const MovieCard = ({ el}) => {
            
             
         </div>
+        </Link>
     );
 };
 
