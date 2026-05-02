@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@400;600&display=swap');
+.trailer-container {
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #070c30 0%, #1c1c67 80%, #2e6596 100%);
+    color: white;
+    padding: 60px 5%;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.movie-aside-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: sticky;
+    top: 60px;
+}
+
+.movie-poster {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    align-self: center;
+}
+
+.movie-poster:hover {
+    transform: scale(1.02);
+}
+
+.movie-text-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-text-details h2 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-family: 'Cinzel', serif;
+}
+
+.description-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.video-section-right {
+    flex: 1.8;
+    width: 100%;
+}
+
+.video-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-btn {
+    background: white;
+    color: #07090e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.back-btn:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-aside-left {
+        position: static;
+        margin-bottom: 40px;
+    }
+}

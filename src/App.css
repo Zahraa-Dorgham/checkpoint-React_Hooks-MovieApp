@@ -5,7 +5,6 @@ body {
   /* Dégradé radial : centre bleu nuit, bords presque noirs */
   background: radial-gradient(circle at center, #070c30 0%, #1c1c67 80%, #2e6596 100%);
   background-attachment: fixed;
-  /* Le fond reste fixe au scroll */
   color: white;
   font-family: 'Inter', sans-serif;
 }
